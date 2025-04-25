@@ -1,0 +1,23 @@
+/* Добавьте стили в global.css или index.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f8fa;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-btn {
+  border-radius: 5px;
+}
+
+.pagination {
+  margin-top: 30px;
+}
