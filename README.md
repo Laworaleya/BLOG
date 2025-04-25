@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+Вот полный текст для вашего `README.md`, который можно вставить прямо в ваш репозиторий. Он содержит инструкции по запуску и описывает проект:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+```markdown
+# Blog App (React + TypeScript)
 
-Currently, two official plugins are available:
+## Описание
+Приложение для управления блогами, созданное с использованием React и TypeScript. Вы можете добавлять, редактировать, удалять и восстанавливать записи. Интерфейс построен с использованием Ant Design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Требования
+Перед запуском приложения убедитесь, что на вашем компьютере установлены:
+- **Node.js** 
+- **NPM** 
 
-## Expanding the ESLint configuration
+## Установка
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/ваш-логин/имя-репозитория.git
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. Перейдите в папку проекта:
+   ```bash
+   cd blog-app
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+3. Установите зависимости:
+   ```bash
+   npm install
+   ```
+
+## Запуск
+Для запуска приложения в режиме разработки выполните:
+```bash
+npm start
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+После этого откройте (http://localhost:3000) в браузере, чтобы увидеть приложение.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Сборка для продакшена
+Для создания оптимизированной сборки выполните:
+```bash
+npm run build
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Сборка сохранится в папке `build`. Вы можете использовать её для деплоя на сервер.
+
+## Структура проекта
+```
+src/
+  components/    - Реализованные компоненты приложения (BlogList, BlogForm и т.д.)
+  pages/         - Страницы приложения
+  types/         - Типы и интерфейсы TypeScript
+  index.tsx      - Точка входа приложения
+  App.tsx        - Корневой компонент приложения
 ```
